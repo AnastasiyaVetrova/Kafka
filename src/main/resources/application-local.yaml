@@ -1,0 +1,44 @@
+jwt:
+  secret: 357638792F423F4428472B4B6250655368566D597133743677397A2443264629
+
+auth:
+  default_login: admin
+  default_password: admin
+  refresh_token_life_seconds: 60
+  access_token_life_seconds: 1
+
+spring:
+  main.banner-mode: off
+  datasource:
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST}/${DB_NAME}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    consumer:
+      topics:
+        topic-one-json: topic-one
+        topic-two-json: topic-two
+      auto-offset-reset: latest
+    consumers:
+      consumer-one:
+        group-id: puppet
+      consumer-two:
+        group-id: puppetJson
+    template:
+      default-topic: default-puppet
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.yaml
+
+logging:
+  level:
+    org.apache.kafka: WARN
+    org.springframework.kafka: WARN
+    root: error
+    com.aston.frontendpracticeservice: info

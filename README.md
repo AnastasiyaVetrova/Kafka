@@ -36,12 +36,12 @@
   - *domain.kafka.RequisitesKafka* - объект для передачи через Kafka.
 
 ## ✨ Рекомендую посмотреть другие проекты:
-1. Rest - основа всего
-2. LF4J
-3. ELK
-4. Starter
-5. Kubernetes
-6. Mongo(в работе)
+1. [Rest - основа всего](https://github.com/AnastasiyaVetrova/Rest)
+2. [SLF4J](https://github.com/AnastasiyaVetrova/SLF4J)
+3. [ELK](https://github.com/AnastasiyaVetrova/ELK)
+4. [Starter](https://github.com/AnastasiyaVetrova/Starter)
+5. [Kubernetes](https://github.com/AnastasiyaVetrova/Kubernetes)
+6. [Mongo(в работе)](https://github.com/AnastasiyaVetrova/Mongo)
 
 ## 🤝 Контакты
 Если у вас есть вопросы или предложения, вы можете связаться со мной:
